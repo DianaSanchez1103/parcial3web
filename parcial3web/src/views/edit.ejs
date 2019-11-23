@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Parcial 3 Web Perritos</title>
+</head>
+<body>
+    <nav class = "navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Perritos</a>
+    </nav>
+        <div class="container">
+            <div class="row">
+                    <div class = "col-md-5 offset-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="/edit/<%=usuario._id%>" method="POST">
+                                        <div class="form-group">
+                                            <input type="text" name="nombre" placeholder="Nombre del perrito" class="form-control" value="<%=usuario.nombre%>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="raza" placeholder="Raza del perrito" class="form-control "  value="<%=usuario.raza%>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" min="0" max="20" name="edad" placeholder="Edad del perrito" class="form-control "  value="<%=usuario.edad%>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="dueno" placeholder="Nombre del propietario perrito" class="form-control "  value="<%=usuario.dueno%>">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Cambiar</button>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+            </div>
+        </div>
+</body>
+</html>
